@@ -1,0 +1,35 @@
+/* pages/welcome/welcome.wxss */
+
+.button{
+  color:#AA936C;
+  background: #0F1E3D;
+  border: 2px solid #AA936C; 
+  border-radius: 2px;
+}
+.button::after{
+  border: none; 
+}
+.page{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #0F1E3D;
+  justify-content: space-around;
+  align-items: center
+ 
+  
+
+}
+.images{
+  align-items: center
+
+}
+/* .img{
+  display: flex;
+} */
+
+
+
+
+
+

@@ -1,0 +1,31 @@
+
+
+
+<view class='page'>
+
+
+<view class='images'>
+<view class='img'>
+<image  mode='aspectFit' src='/logo/biglion.jpeg'></image>
+</view>
+<view class='img'>
+<image  style = 'height: 125rpx;'mode='aspectFit' src='/logo/lionsword.jpeg'></image>
+</view>
+</view>
+
+<view>
+<button
+    wx:if='{{!verifyflag&&!authorflag}}'
+    open-type="getUserInfo"
+    bindgetuserinfo="bindGetUserInfo"
+    size = 'mini'
+    class='button'
+>authorize</button>
+  
+  <button bindtap ='login' wx:if='{{verifyflag||(authorflag&&loginflag)}}'  size = 'mini' class='button'>login</button>
+
+   <button bindtap ='register' wx:if='{{authorflag&&(!loginflag)}}'  size = 'mini' class='button'>register</button>
+
+</view>
+</view>
+

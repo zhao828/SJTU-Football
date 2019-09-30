@@ -1,0 +1,71 @@
+<!--pages/main/main.wxml-->
+<view class='main'>
+<view class="swiper-tab">
+    <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" >SIGN UP</view>
+    <view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" >INFO</view>
+    <view class="swiper-tab-item {{currentTab==2?'active':''}}" data-current="2" >EQUIPS</view>
+    <view class="swiper-tab-item {{currentTab==3?'active':''}}" data-current="3" >MORE</view>
+
+</view>
+
+<swiper class='swiper' current="{{currentTab}}" bindchange="swiperTab" >
+    <swiper-item class='page'>
+    <text wx:if='{{schedule}}' class='bigword1' style='font-size:80rpx;'>GAME SCHEDULE</text>
+      <view wx:if='{{schedule}}' class='date'>
+      
+      <scroll-view style='height:700rpx; ' scroll-y="true">
+        <view wx:for='{{schedule}}' wx:key='time' class='schedule' style='margin:0rpx 0 50rpx 0;'>
+          <text class='bigword1' style='font-size:80rpx;'>{{item.time}}</text>
+          <text class='bigword1' style='font-size:60rpx;'>{{item.home}} vs {{item.away}}</text> 
+          
+        </view>
+      </scroll-view>
+    </view>   
+      <button wx:if='{{train}}' disabled='{{playerdata.train==1}}' bindtap='train' class='buttonword'>SIGN UP FOR THE TRAIN</button>
+      <button wx:if='{{game}}' bindtap='match' disabled='{{playerdata.game==1}}' class='buttonword'>SIGN UP FOR THE MATCH</button>
+      <text wx:if='{{!train&&!game}}'  class='bigword' style='font-size:100rpx;'>WAIT FOR THE CALL</text>
+    </swiper-item>
+    
+    <swiper-item class='page' > 
+    <text  wx:if='{{date}}' class='bigword1'>NEXT GAME</text> 
+    <view wx:if='{{date}}' class='date'>
+    
+    <text class='bigword1' style='font-size:80rpx;'>{{date.time}}</text> 
+    <text class='bigword1' style='font-size:60rpx;'>{{date.home}} vs {{date.away}}</text> 
+    </view>   
+      <image  class= 'avater'src='{{userinfo.avatarUrl}}'></image> 
+          <view class ='word'>
+            <text wx:if = '{{playerdata.sudo==1}}'class='bigword1' >CAPTAIN</text>
+            <text wx:else class='bigword1' >PLAYER</text>
+            <view class='show'>
+              <text class='item'>姓名</text>
+              <text class='item'>{{playerdata.name}}</text>
+            </view>
+            <view class='show'>
+              <text class='item'>号码</text>
+              <text class='item'>{{playerdata.number}}</text>
+            </view>
+            <button wx:if = '{{playerdata.sudo==1}}' class='button' size='mini' bindtap='sudo'>sudo</button>
+          </view>
+    </swiper-item>
+    
+    <swiper-item class='page1'>   
+     <view class='equip'>
+        <view wx:key='key' wx:for="{{array}}" class='single'>
+          <text class='item'>{{item}}</text>
+          <icon wx:if='{{playerdata[dict[array[index]]]>=1}}'type="success" color='#AA936C'></icon>
+          <icon wx:else type='warn' ></icon>
+        </view>
+      </view>  
+        <button size = 'mini' bindtap='edit' class='button'>edit</button>   
+    </swiper-item>
+    
+    <swiper-item class='page2'>
+      
+      <text class='bigword'>COMING SOON</text>
+      <button bindtap='file' class='icon' size='mini'>FILE</button>
+    
+    </swiper-item>
+
+</swiper>
+</view>

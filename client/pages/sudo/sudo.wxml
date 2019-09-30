@@ -1,0 +1,74 @@
+<!--pages/sudo/sudo.wxml-->
+<view>
+  <swiper bindchange='swipertab' current='{{currentTab}}' class='swiper'>
+    <swiper-item class='swiper-item' >
+        
+        <view class='button_view'>
+          <button wx:if='{{!starttrain}}' disabled='{{startmatch}}' bindtap='train' class = 'button'>start new train call</button>
+          <button wx:else class = 'button' bindtap='train'>train call cancel</button>
+          <button wx:if='{{!startmatch}}' disabled='{{starttrain}}' bindtap='match' class = 'button'>start new match call</button>
+          <button wx:else bindtap='match' class = 'button'>match call cancel</button>
+          <button bindtap='text' class = 'button'>text inform</button>
+        </view>
+       
+       
+        <view class='bigword'><text>ONCALL LIST</text>
+        </view> 
+         <view class='bigword'><text>{{oncall.length}}</text></view>
+        
+        <scroll-view scroll-y="true" class='roll' >   
+          <view wx:for='{{oncall}}' wx:key='name' class='absense'>
+            <text bindlongpress='change' data-change='toab' data-name='{{item.name}}'>  {{item.name}}</text>
+          </view>
+        </scroll-view>
+        
+
+        <view class='bigword'><text>ABSENSE LIST</text>
+        </view>
+        <view class='bigword'><text>{{absense.length}}</text></view>
+        <scroll-view scroll-y="true" class='roll' >   
+          <view wx:for='{{absense}}' wx:key='name' class='absense'>
+            <text bindlongpress='change' data-change='toon' data-name='{{item.name}}'>{{item.name}}</text>
+          </view>    
+        </scroll-view>
+      
+    </swiper-item>
+    
+    <swiper-item class='swiper-item'>
+       
+          <view  class='bigword1'>
+            <text style='margin: auto;'>TOTAL COUNT</text>
+          </view>
+        
+      <scroll-view scroll-y="true"  style='height:70vh'class='roll' > 
+       
+        <view class='absense'>
+           <text style="width:120rpx">姓名</text> 
+            <block wx:for='{{array}}'  wx:key='key' >
+              <text>{{array[index]}}</text>
+            </block>
+          </view>
+        
+        <view wx:for='{{oncall}}' wx:key='name' wx:key='key' class='absense'>
+           <text style="width:120rpx">{{item.name}}</text> 
+           <view wx:for='{{dict}}' wx:for-item="equip" wx:key='key' wx:for-index='ix'> 
+            
+            <icon wx:if='{{item[dict[ix]]>=1}}'type="success" color='#AA936C'></icon>
+          <icon wx:else type='warn' ></icon>
+           
+           </view>
+          
+        </view>
+       </scroll-view>
+    </swiper-item>
+
+
+
+  </swiper>
+
+
+
+
+
+
+</view>

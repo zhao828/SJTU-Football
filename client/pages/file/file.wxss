@@ -1,0 +1,30 @@
+/* client/pages/file/file.wxss */
+
+.page{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: space-around
+}
+.scroll{
+  height:80vh;
+  width: 80vw;
+  border: 2px solid #AA936C; 
+  border-radius: 10px;
+  text-align: center;
+  font-size: 50rpx;
+  color: #AA936C
+ 
+}
+
+.bigword{
+  color:#AA936C;
+  font-size: 150rpx;
+  font-family: CollegiateHeavyOutline;
+  text-align: center;
+}
+.main{
+  background-color: #0F1E3D;
+  height: 100vh;
+}

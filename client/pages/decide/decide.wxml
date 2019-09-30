@@ -1,0 +1,9 @@
+<!--pages/decide/decide.wxml-->
+<view>
+  <view>请填写装备信息</view>
+  <picker mode="multiSelector" bindchange="bindMultiPickerChange" value="{{multiIndex}}" range="{{multiArray}}">
+    甲{{multiArray[0][multiIndex[0]]}},头盔{{multiArray[1][multiIndex[1]]}},
+    防撞库{{multiArray[2][multiIndex[2]]}},主场球衣{{multiArray[3][multiIndex[3]]}},客场球衣{{multiArray[4][multiIndex[4]]}},牙套{{multiArray[5][multiIndex[5]]}}
+  </picker>
+  <button bindtap = 'submit'>SUBMIT</button>
+</view>

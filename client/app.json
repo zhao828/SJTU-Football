@@ -1,0 +1,39 @@
+{
+  "pages":[
+    "pages/welcome/welcome",
+    "pages/main/main",
+    "pages/text/text",
+    "pages/sudo/sudo",
+    
+    "pages/tab/tab",
+    
+    
+    
+    
+    
+   
+    
+    "pages/file/file",
+    
+    "pages/down/down",
+      
+    
+    
+    "pages/index/index",
+    
+    
+    "pages/firstpage/firstpage",   
+      
+    "pages/decide/decide",
+    
+    
+    "pages/addCgi/addCgi"
+  ],
+  "window":{
+    "backgroundColor":"#F6F6F6",
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#0F1E3D",
+    "navigationBarTitleText": "SJTU LIONS",
+    "navigationBarTextStyle":"white"
+  }
+}

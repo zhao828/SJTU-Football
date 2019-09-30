@@ -1,0 +1,44 @@
+/* client/pages/text/text.wxss */
+.page{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #0F1E3D;
+  justify-content: space-around;
+  align-items: center;
+}
+.selectors{
+  display: flex;
+  flex-direction: column;
+  
+}
+.selector{
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+ 
+}
+.input{
+  width: 300rpx;
+  text-align: center;
+  color:  #AA936C;
+  border-bottom: 2rpx solid #AA936C
+}
+.text{
+  width: 80vw;
+  text-align: center;
+  color:  #AA936C;
+}
+
+.item{
+  width: 200rpx;
+  color: #AA936C;
+  text-align: center;
+}
+.button{
+  color:#AA936C;
+  background: #0F1E3D;
+  border: 2px solid #AA936C; 
+  border-radius: 2px;
+}

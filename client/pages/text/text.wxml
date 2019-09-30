@@ -1,0 +1,26 @@
+<!--client/pages/text/text.wxml-->
+<view class='page'>
+  <view class='text'>
+    <text >雄狮队员们， [名称]  报名已经开始，时间为  [时间]  ,地点在  [地点]  ,请在小程序内报名,若要请假者请在群里告知队长。</text>
+    </view>
+    <view class='selectors'>
+    <view class='selector'>
+      <text class='item'>名称</text>
+      <input class='input' bindinput='nameinput' placeholder=''></input>
+    </view>
+    <view class='selector'>
+      <text class='item'>时间</text>
+      <input class='input' bindinput='timeinput' placeholder=''></input>
+
+    </view>
+    <view class='selector'>
+      <text class='item'>地点</text>
+      <input class='input' bindinput='locinput' placeholder=''></input>
+    </view>
+    
+     
+    </view>
+    <button class='button'bindtap="send" size = 'mini'>发送</button>
+
+
+</view>

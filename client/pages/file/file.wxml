@@ -1,0 +1,36 @@
+
+<swiper current="{{currentTab}}"  bindchange="swiperTab" class='main' >
+  <swiper-item class='page'>
+    <text class='bigword'>LOCAL</text>
+    
+    <scroll-view class='scroll'>
+      <view wx:if="{{array}}">
+        <view wx:for='{{array}}' wx:key='key'>
+        <text bindtap = 'open' bindlongpress ='del' data-url='{{index}}'>{{array[index]}}</text>
+        </view>
+        </view>
+      <view wx:else>None
+      </view> 
+      
+    </scroll-view>
+  </swiper-item>
+
+  <swiper-item class='page'>
+   <text class='bigword'>WEB</text>
+    <scroll-view class='scroll'>
+      <view wx:if="{{downarray}}">
+        <view  wx:for='{{downarray}}' wx:key='Key'>
+          <text bindtap='download' data-name='{{item.Key}}'>{{item.Key}}</text>
+        </view>
+      </view>
+      <view wx:else>None</view>
+    </scroll-view>
+  </swiper-item>
+</swiper>
+
+
+
+
+
+
+

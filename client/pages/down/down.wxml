@@ -1,0 +1,10 @@
+<view class='page'>
+
+  <text class='bigword'>DOWNLOAD</text>
+ 
+  <scroll-view class="scroll">
+    <view class='item' wx:for='{{array}}' wx:key='Key'>
+      <text bindlongtap='long' data-name='{{item.Key}}'>{{item.Key}}</text>
+    </view>
+  </scroll-view>
+</view>

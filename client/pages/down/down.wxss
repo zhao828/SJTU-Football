@@ -1,0 +1,29 @@
+/* client/pages/down/down.wxss */
+.bigword{
+  color:#AA936C;
+  font-size: 100rpx;
+  font-family: CollegiateHeavyOutline;
+  text-align: center;
+}
+
+.page{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+}
+.scroll{
+  height:80vh;
+  width: 80vw;
+  border: 2px solid #AA936C; 
+  border-radius: 10px;
+}
+
+.item{
+  text-align: center;
+  color: #AA936C; 
+}
+.main{
+  background-color: #434343;
+}

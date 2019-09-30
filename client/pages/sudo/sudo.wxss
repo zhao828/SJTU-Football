@@ -1,0 +1,66 @@
+/* pages/sudo/sudo.wxss */
+.swiper{
+  display:flex;
+  height: 100vh;
+  background:#0F1E3D;
+}
+.button{
+  width:80%;
+  color:#AA936C;
+  background: #0F1E3D;
+  border: 2px solid #AA936C; 
+  border-radius: 10px;
+}
+
+.button_view{
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+}
+
+.absense{
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: #AA936C;
+
+  margin: 20rpx 0rpx 20rpx 0rpx
+
+}
+
+.bigword{
+  color:#AA936C;
+  font-size: 90rpx;
+  height: 5vh;
+  font-family: CollegiateHeavyOutline;
+  text-align: center;
+  
+}
+.roll{
+  border: 2px solid #AA936C; 
+  border-radius: 10px;
+  height: 25vh;
+  align-self: center;
+  width: 80vw;
+ 
+}
+.swiper-item{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around
+}
+
+.bigword1{
+  color:#AA936C;
+  font-size: 100rpx;
+  display: flex;
+  font-family: CollegiateHeavyOutline;
+  flex-direction: column;
+  
+}
+  
+
+

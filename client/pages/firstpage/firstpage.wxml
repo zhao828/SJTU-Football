@@ -1,0 +1,21 @@
+<!--pages/firstpage/firstpage.wxml-->
+<view class = "container">
+  <image  style = 'height: 200rpx;'mode='aspectFit' src='/logo/lionsword.jpeg'></image>
+ <text class='bigword'>VERIFICATION</text>
+
+  <view class='infos'>
+  <view style='border-bottom: 5rpx solid #AA936C;'>
+ 
+    <input bindinput='user' class = 'input' type = 'number'placeholder='enter your phone'></input>
+    </view>
+    <view style='border-bottom: 5rpx solid #AA936C;' class='info'>
+    <input bindinput='password'class = 'input' password= 'true' placeholder='enter your pA55word'></input>
+    </view>
+  </view>
+
+
+  <button class='button'bindtap="login" size = 'mini' > log in </button>
+
+
+</view>
+

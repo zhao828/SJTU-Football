@@ -1,0 +1,48 @@
+<!--pages/tab/tab.wxml-->
+<!--pages/switch/switch.wxml-->
+<view >
+    <swiper class = 'swiper' indicator-dots='true' current= '{{currenttab}}'  bindchange="bindChange">
+
+      
+      <swiper-item >
+        
+        <view class= 'page'>
+
+          <view>  
+            <image  mode='aspectFit' src='/logo/biglion.jpeg'></image>
+          </view>     
+          <view class='selector'>
+            <text class='item'>姓名</text>
+            <input class='input' bindinput='nameinput' placeholder='你的名字'></input>
+          </view>
+          <view class='selector'>
+            <text class='item'>球衣号码</text>
+            <input class='input' type='number'  bindinput='noinput' placeholder='没有不要填'></input>
+          </view>
+        </view>
+        
+      </swiper-item>
+      
+
+
+      <swiper-item catchtouchmove='catchTouchMove'  >
+      <view class= 'page'>
+        <text class='font'>装备信息</text>
+        <view wx:for='{{array}}' wx:for-indx='index' wx:for-item='data'class='selectors'>
+     
+          <picker mode='selector' data-index='{{index}}' bindchange='bindPickerChange' range='{{data.select}}'> 
+        <view class='selector'>
+        <view class='item'>{{data.name}}</view>
+        <view class='input'>{{data.select[multiIndex[index]]}}</view>
+        </view>
+        </picker>
+        
+        </view>
+        <button class = 'button 'bindtap='submit'>Submit</button>
+        </view>
+      </swiper-item>
+
+    </swiper>
+
+</view>
+

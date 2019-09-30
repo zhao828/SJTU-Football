@@ -1,0 +1,37 @@
+/* pages/firstpage/firstpage.wxss */
+.container{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color:#0F1E3D;
+  justify-content: space-around;
+
+  }
+.bigword{
+  color:#AA936C;
+  font-size: 100rpx;
+  font-family: CollegiateHeavyOutline;
+  text-align: center;
+}
+.button{
+  color:#AA936C;
+  background: #0F1E3D;
+  border: 2px solid #AA936C; 
+  border-radius: 2px;
+}
+.button::after{
+  border: none; 
+}
+
+  .infos{
+  
+    border-radius: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; 
+  }
+  .input{
+    color: #AA936C;
+
+  }
