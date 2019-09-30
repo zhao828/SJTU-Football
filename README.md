@@ -1,5 +1,5 @@
 # SJTU Football Manage System
-
+![lion](https://github.com/zhao828/SJTU-Football/blob/master/WechatIMG380.jpeg "lion")
 ### This is the final version of sjtu football manage system
 #### Feature
 - [x] Players can register their equipments and sign up for match/training
