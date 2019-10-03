@@ -9,4 +9,5 @@
 - [x] Match Schedule Notification
 
 ## show case
-demo video in youtube.
+
+[youtube](https://youtu.be/3buaa4gWVa4 'showcase_video')
